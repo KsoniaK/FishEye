@@ -19,9 +19,9 @@
     <!-- Filtres -->
     <section class="section-filtre" aria-label="filtres">
       <div class="label-filtre">
-        <label>Trier par</label>
+        <label for="select" class="visually-hidden">Trier par</label>
       </div>
-      <button onclick="toggleDropDown(this)" id="filtres" class="filtre"></button>
+      <div id="filtre-container"></div>
     </section>
     <!-- Likes -->
     <section id="compteur-likes_prix" aria-label="section likes">
@@ -34,12 +34,6 @@
         <span> €/ jour</span>
      </div>
     </section>
-
-
-
-
-
-
     <!-- Medias -->
     <section id="liste-media" class="media_profil" aria-label="Photos"></section>
     <!-- Carousel -->
@@ -50,9 +44,15 @@
             <div class="divCarousel-multimedias"></div>
             <p class="carouselPhotosNames"></p>
           </div>
-          <img src="./assets/images/arrow.png" class="bouton" id="g" alt="image précédente" onclick="prev(this)">
-          <img src="./assets/images/arrow.png" class="bouton" id="d" alt="image suivante" onclick="next(this)">
-          <img src="./assets/images/close.svg" id="carousel-close" alt="fermeture modal photo" onclick="closeModalCarousel()">
+          <button class="carousel-prev" onclick="prev()">
+            <img id="g"  src="./assets/images/arrow.png" class="bouton" alt="image précédente">
+          </button>
+          <button class="carousel-next" onclick="next()">
+            <img id="d" src="./assets/images/arrow.png" class="bouton" alt="image suivante">
+          </button>
+          <button class="carousel-close" onclick="closeModalCarousel()">
+            <img id="carousel-close"  src="./assets/images/close.svg" alt="fermeture modal photo">
+          </button>
         </div>
       </div>
     </section>

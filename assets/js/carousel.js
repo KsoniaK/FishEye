@@ -5,6 +5,17 @@
 // Ouverture Carousel
 let index, last, mediaEnd;
 function openModalCarousel(div) {	
+	const carousel = document.getElementById('carousel-container');
+	document.getElementById('bgc-carousel').style.display = 'block';
+	carousel.style.display = 'block';
+
+	// Masquer le background pour les lecteurs
+	document.getElementById('main').setAttribute('aria-hidden', 'true');
+	document.getElementById('header-photographe').setAttribute('aria-hidden', 'true');
+
+	// Focus trap
+	trapFocus(carousel);
+
 	last = allMedias.length - 1;
 	const idMediaCarousel = Number(div.getAttribute('data-id'));
 	
@@ -33,8 +44,17 @@ function createMultimedia(mediaNeed) {
 
 // Fermeture Carousel
 function closeModalCarousel() {
-	document.querySelector('.modalCarousel').style.display = 'none';
+	const carousel = document.getElementById('carousel-container');
 	document.getElementById('bgc-carousel').style.display = 'none';
+	carousel.style.display = 'none';
+
+	// Réactiver le background
+	document.getElementById('main').setAttribute('aria-hidden', 'false');
+	document.getElementById('header-photographe').setAttribute('aria-hidden', 'false');
+
+	// Remettre le focus sur un élément logique (ex: premier média)
+	const firstMedia = document.querySelector('.media-button');
+	if (firstMedia) firstMedia.focus();
 }
 
 // Boutons Next et Prev
@@ -61,3 +81,52 @@ function prev() {
 	index -= 1;
 	createMultimedia(allMedias[index]);
 }
+
+// Gérer les touches clavier (flèches gauche/droite + Escape)
+document.addEventListener('keydown', function(e) {
+	const carouselOpen = document.getElementById('bgc-carousel').style.display === 'block';
+	if (!carouselOpen) return;
+
+	switch(e.key) {
+	case 'ArrowLeft':
+		prev();
+		break;
+	case 'ArrowRight':
+		next();
+		break;
+	case 'Escape':
+		closeModalCarousel();
+		break;
+	}
+});
+
+// Création d'un “focus trap” : Lorsqu’une modale est ouverte, le focus doit rester à l’intérieur.
+function trapFocus(element) {
+	const focusableSelectors = 'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
+	const focusableElements = Array.from(element.querySelectorAll(focusableSelectors));
+	if (focusableElements.length === 0) return;
+
+	const firstFocusable = focusableElements[0];
+	const lastFocusable = focusableElements[focusableElements.length - 1];
+
+	element.addEventListener('keydown', function(e) {
+		if (e.key !== 'Tab') return;
+
+		if (e.shiftKey) { // Shift + Tab
+			if (document.activeElement === firstFocusable) {
+				e.preventDefault();
+				lastFocusable.focus();
+			}
+		} else { // Tab
+			if (document.activeElement === lastFocusable) {
+				e.preventDefault();
+				firstFocusable.focus();
+			}
+		}
+	});
+
+	// Met le focus sur le premier élément au moment de l'ouverture
+	firstFocusable.focus();
+}
+
+

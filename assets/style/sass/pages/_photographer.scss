@@ -10,6 +10,11 @@
             width: $pourcentHundred / 4;
             height: $vhStandard * 40;
             margin: $remStandard * 2;
+                .media-button{
+                    width: $pourcentHundred;
+                    background-color: $light_color;
+                    border: $none;
+                }
                 .description-photos{
                     @include DF_JCSB_AIC;
                         p{
@@ -18,13 +23,16 @@
                         };
                         .div-jaime{
                             @include DF_AIC;
+                                .likes-button{
+                                    background-color: $light_color;
+                                    border: $none;
+                                }
                                 p{
                                     color: $primary_color;
                                     padding-right: $remStandard * .5;
                                     margin: $uniteNul;
                                 };
                                 .likes-img{
-                                    width: $pourcentHundred / 2;
                                     height: $vhStandard * 2;
                                     filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%);
                                         &:hover{

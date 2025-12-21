@@ -20,9 +20,9 @@ function headerPhotographer(){
         
 	headerContact.innerHTML = 
         `<h2 id="modal-heading">Contactez-moi <br> ${photographerFiltres[0].name}</h2>
-         <button data-dismiss="dialog">
-            <img src="assets/images/close.svg" id="carrousel-close-contact" alt="${photographerFiltres[0].name}"  aria-label="fermer la modale" onclick="closeModal()"/>
-         </button>
+        <button id="carrousel-close-contact" aria-label="Fermer la modal" onclick="closeModal()">
+            <img src="assets/images/close.svg" alt="">
+        </button>
         `;
         
 	return(headerPhotographer, headerContact);
