@@ -4,7 +4,11 @@
 
 // Ouverture Carousel
 let index, last, mediaEnd;
-function openModalCarousel(div) {	
+let lastFocusedElement = null;
+
+function openModalCarousel(div) { 
+	lastFocusedElement = div;
+  
 	const carousel = document.getElementById('carousel-container');
 	document.getElementById('bgc-carousel').style.display = 'block';
 	carousel.style.display = 'block';
@@ -18,10 +22,10 @@ function openModalCarousel(div) {
 
 	last = allMedias.length - 1;
 	const idMediaCarousel = Number(div.getAttribute('data-id'));
-	
+  
 	// Au clic sur le media , vérification correspondance id
 	const mediaClick = allMedias.filter(media => media.id === idMediaCarousel)[0];
-	
+  
 	// Recherche de l'index du média cliqué
 	index = allMedias.map(media => media.id).indexOf(idMediaCarousel);
 	createMultimedia(mediaClick);
@@ -29,7 +33,7 @@ function openModalCarousel(div) {
 
 // Création Carousel
 function createMultimedia(mediaNeed) {
-	
+  
 	// Vérification si image ou vidéo, créer la balise en conséquence
 	mediaEnd = mediaNeed.image ?
 		`<img src="./assets/images/photos/${photographerFiltres[0].name}/${mediaNeed.image}" alt="${mediaNeed.title}" data-id="${mediaNeed.id}"/>`
@@ -52,9 +56,10 @@ function closeModalCarousel() {
 	document.getElementById('main').setAttribute('aria-hidden', 'false');
 	document.getElementById('header-photographe').setAttribute('aria-hidden', 'false');
 
-	// Remettre le focus sur un élément logique (ex: premier média)
-	const firstMedia = document.querySelector('.media-button');
-	if (firstMedia) firstMedia.focus();
+	// // Remettre le focus sur le dernier élément déclancheur
+	if (lastFocusedElement) {
+		lastFocusedElement.focus();
+	}
 }
 
 // Boutons Next et Prev
@@ -128,6 +133,7 @@ function trapFocus(element) {
 	// Met le focus sur le premier élément au moment de l'ouverture
 	firstFocusable.focus();
 }
+
 
 
 
