@@ -13,7 +13,7 @@ FishEye, notre nouveau client dont le site web permet aux photographes indépend
 - HTML
 - SASS
 
-## GitHub
+## GitHub Pages
 
 https://ksoniak.github.io/FishEye/
 
