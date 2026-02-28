@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/images/logo.png" alt="Logo FishEye" width="100">
+</p>
+
 # Projet FishEye : Créer un site accessible pour une plateforme de photographes
 
 Nous travaillons pour Techasite, une société conseil spécialisée dans le développement de sites web et d’applications mobiles.
