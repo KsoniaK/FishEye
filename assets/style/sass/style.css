@@ -73,14 +73,18 @@ body {
         color: #901C1C;
         margin: 0; }
       #liste-media .media .description-photos .div-jaime {
+        align-items: center;
         display: flex;
         align-items: center; }
         #liste-media .media .description-photos .div-jaime .likes-button {
           background-color: white;
-          border: none; }
+          border: none;
+          min-width: 25px;
+          min-height: 25px;
+          padding: 8px; }
         #liste-media .media .description-photos .div-jaime p {
           color: #901C1C;
-          padding-right: 0.5rem;
+          padding: 8px;
           margin: 0; }
         #liste-media .media .description-photos .div-jaime .likes-img {
           height: 2vh;

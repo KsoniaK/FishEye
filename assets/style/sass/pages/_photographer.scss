@@ -22,24 +22,25 @@
                             margin: $uniteNul;
                         };
                         .div-jaime{
+                            align-items: $center;
                             @include DF_AIC;
                                 .likes-button{
                                     background-color: $light_color;
                                     border: $none;
-                                    min-width: 24px;
-                                    min-height: 24px;
-                                    padding: 8px;
+                                    min-width: $pxHundred / 4;
+                                    min-height: $pxHundred / 4;
+                                    padding: $pxStandard * 8;
                                 }
                                 p{
                                     color: $primary_color;
-                                    padding-right: $remStandard * .5;
+                                    padding: 8px;
                                     margin: $uniteNul;
                                 };
                                 .likes-img{
-                                    min-width: 24px;
-                                    min-height: 24px;
-                                    padding: 8px;
-                                    // height: $vhStandard * 2;
+                                    // min-width: 24px;
+                                    // min-height: 24px;
+                                    // padding: 8px;
+                                    height: $vhStandard * 2;
                                     filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%);
                                         &:hover{
                                             filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%);
