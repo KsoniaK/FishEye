@@ -1,32 +1,13 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+
 
 // Création contenu page d'accueil sans template string
+// eslint-disable-next-line no-unused-vars
 function photographerFactory(photographer) {
 	const {portrait, name, city, country, tagline, price, id} = photographer;
 	// Chemin vers les images
 	const picture = `./assets/images/photos/Photographers_ID_Photos/${portrait}`;
 
 	function getUserCardDOM() {
-
-		// return `
-		// 		<article id="${id}" class="photographers_profils">
-		// 			<a href="./photographer.html?id=${id}">
-		// 					<img src="${picture}" alt="${name}"/>
-		// 					<h2>${name}<h2/>
-		// 			<a/>
-		// 			<div class="ville-pays">
-		// 					<h3>${country} + ','<h3/>
-		// 					<h3>${city}<h3/>
-		// 			<div/>
-		// 			<p>${tagline}<p/>
-		// 			<p class="prix-photographer">${price} + '€/jour'<p/>
-		// 		<article/>`;
-
-
-
-
 		// Création des élements
 		const article = document.createElement('article');
 		const imgElt = document.createElement('img');
@@ -41,7 +22,7 @@ function photographerFactory(photographer) {
 		// Ajout d'un attribut, d'une class
 		link.setAttribute('href', `./photographer.html?id=${id}`);
 		imgElt.setAttribute('src', picture);
-		imgElt.setAttribute('alt', `${name}`);
+		imgElt.setAttribute('alt', 'photo de profil du photographe');
 		article.classList.add('photographers_profils');
 		article.setAttribute('id', id);
 		villePays.classList.add('ville-pays');

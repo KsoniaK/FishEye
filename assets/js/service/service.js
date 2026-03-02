@@ -1,8 +1,7 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+/* global init */
 
 // Variable globale : elle sera utilisée dans d'autres fichiers
+// eslint-disable-next-line no-unused-vars
 let multimedias;
 
 // Récupération du fichier JSON

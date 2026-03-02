@@ -1,8 +1,7 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+/* global allMedias, createCardGallery */
 
 // Création du filtre
+// eslint-disable-next-line no-unused-vars
 function createDropDown() {
 	const container = document.getElementById('filtre-container');
 	if (!container) return;

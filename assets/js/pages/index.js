@@ -1,8 +1,8 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+/* global multimedias, photographerFactory */
+
 
 // Gestion du contenu de la page index
+// eslint-disable-next-line no-unused-vars
 function init() {
 	const photographersSection = document.querySelector('.photographer_section');
 	// Pour chaque photographe

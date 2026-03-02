@@ -1,11 +1,10 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+/* global allMedias, photographerFiltres */
 
 // Ouverture Carousel
 let index, last, mediaEnd;
 let lastFocusedElement = null;
 
+// eslint-disable-next-line no-unused-vars
 function openModalCarousel(div) { 
 	lastFocusedElement = div;
   
@@ -56,7 +55,7 @@ function closeModalCarousel() {
 	document.getElementById('main').setAttribute('aria-hidden', 'false');
 	document.getElementById('header-photographe').setAttribute('aria-hidden', 'false');
 
-	// // Remettre le focus sur le dernier élément déclancheur
+	// Remettre le focus sur le dernier élément déclancheur
 	if (lastFocusedElement) {
 		lastFocusedElement.focus();
 	}

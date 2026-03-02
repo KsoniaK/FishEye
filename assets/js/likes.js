@@ -1,6 +1,4 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+/* global photographerFiltres */
 
 // La totalité des likes par photographe
 function total(){
@@ -21,6 +19,7 @@ function total(){
 }
 
 // Les likes de chaque photo
+// eslint-disable-next-line no-unused-vars
 function likes(imgLike){
 	let nbrLike;
 	const idMedia = imgLike.getAttribute('data-id');

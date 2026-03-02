@@ -1,18 +1,14 @@
-// Commentaires pour retirer les erreurs à ignorer dans eslint
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-
-const btnClose = document.getElementById('contact_modal');
+// const btnClose = document.getElementById('contact_modal');
 const modal = document.getElementById('contact_modal');
 const header = document.getElementById('header-photographe');
 const main = document.getElementById('main');
 const prenom = document.getElementById('prenom');
-// const closeButton = document.getElementById('carrousel-close-contact');
 
-// Pour les élements focalisables au clavier
-const keyCodes = {tab: 9, enter: 13, escape: 27};
+// // Pour les élements focalisables au clavier
+// const keyCodes = {tab: 9, enter: 13, escape: 27};
 
 // Ouverture formulaire contact
+// eslint-disable-next-line no-unused-vars
 function displayModal() {
 	modal.style.display = 'block';
 	modal.setAttribute('aria-hidden','false');
@@ -20,7 +16,7 @@ function displayModal() {
 	main.setAttribute('aria-hidden','true');
 	prenom.focus();
 
-	// 🔁 RECALCUL des éléments focusables
+	// RECALCUL des éléments focusables
 	const focusableElements = modal.querySelectorAll(
 		'input, textarea, button, select, [tabindex]:not([tabindex="-1"])'
 	);
@@ -56,30 +52,8 @@ function closeModal() {
 	main.setAttribute('aria-hidden','false');
 }
 
-// // Création d'un “focus trap” : Lorsqu’une modale est ouverte, le focus doit rester à l’intérieur.
-// modal.addEventListener('keydown', function(e) {
-// 	if (e.key === 'Tab') {
-// 		if (e.shiftKey) { // Shift + Tab
-// 			if (document.activeElement === firstFocusable) {
-// 				e.preventDefault();
-// 				lastFocusable.focus();
-// 			}
-// 		} else { // Tab
-// 			if (document.activeElement === lastFocusable) {
-// 				e.preventDefault();
-// 				firstFocusable.focus();
-// 			}
-// 		}
-// 	}
-// 	if (e.key === 'Escape') { 
-// 		closeModal(); 
-// 	}
-// });
-
-
-
-
 // On affiche dans la console les données renseignées par l'utilisateur à la soumission du formulaire
+// eslint-disable-next-line no-unused-vars
 function getValue() {
 	// Sélectionner l'élément input et récupérer sa valeur
 	const prenom = document.getElementById('prenom').value;
