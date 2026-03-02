@@ -20,6 +20,7 @@
                         p{
                             color: $primary_color;
                             margin: $uniteNul;
+                            font-size: $pxHundred / 5;
                         };
                         .div-jaime{
                             align-items: $center;
@@ -37,10 +38,8 @@
                                     margin: $uniteNul;
                                 };
                                 .likes-img{
-                                    // min-width: 24px;
-                                    // min-height: 24px;
-                                    // padding: 8px;
-                                    height: $vhStandard * 2;
+                                    width: 24px;
+                                    height: 24px;
                                     filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%);
                                         &:hover{
                                             filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%);

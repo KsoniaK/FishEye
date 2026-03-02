@@ -71,7 +71,8 @@ body {
       align-items: center; }
       #liste-media .media .description-photos p {
         color: #901C1C;
-        margin: 0; }
+        margin: 0;
+        font-size: 20px; }
       #liste-media .media .description-photos .div-jaime {
         align-items: center;
         display: flex;
@@ -87,7 +88,8 @@ body {
           padding: 8px;
           margin: 0; }
         #liste-media .media .description-photos .div-jaime .likes-img {
-          height: 2vh;
+          width: 24px;
+          height: 24px;
           filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%); }
           #liste-media .media .description-photos .div-jaime .likes-img:hover {
             filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%); }
