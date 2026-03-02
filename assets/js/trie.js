@@ -11,9 +11,7 @@ function createDropDown() {
 			<button
 				id="filter-button"
 				class="select-trigger"
-				aria-haspopup="listbox"
-				aria-expanded="false"
-				aria-controls="filter-list">
+				aria-expanded="false">
 				Popularité
 				<span class="arrow"></span>
 			</button>
