@@ -8,18 +8,22 @@
     width: $pourcentHundred / 5;
     height: $pourcentStandard * 7;
     z-index: $uniteStandard * 2;
-        .compteur-likes_prix_bas-de-page{
-            @include DF_JCE;
-            align-items: $center;
-            width: $pourcentStandard * 30;
-                & img{
-                    height: $pourcentStandard * 30;
-                    padding-left: $remStandard * .5;
-                };
-        };
-        .prix{
-            @include DF_AIC;
-        };
+        p{
+            font-size: 20px;
+            margin-right: .5rem;
+        }
+            .compteur-likes_prix_bas-de-page{
+                @include DF_JCE;
+                align-items: $center;
+                width: $pourcentStandard * 30;
+                    & img{
+                        width: 24px;
+                        height: 24px;
+                    };
+            };
+            .prix{
+                @include DF_AIC;
+            };
 };
 
 

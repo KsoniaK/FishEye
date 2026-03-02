@@ -85,7 +85,6 @@ body {
           padding: 8px; }
         #liste-media .media .description-photos .div-jaime p {
           color: #901C1C;
-          padding: 8px;
           margin: 0; }
         #liste-media .media .description-photos .div-jaime .likes-img {
           width: 24px;
@@ -241,14 +240,17 @@ header {
   width: 20%;
   height: 7%;
   z-index: 2; }
+  #compteur-likes_prix p {
+    font-size: 20px;
+    margin-right: .5rem; }
   #compteur-likes_prix .compteur-likes_prix_bas-de-page {
     display: flex;
     justify-content: end;
     align-items: center;
     width: 30%; }
     #compteur-likes_prix .compteur-likes_prix_bas-de-page img {
-      height: 30%;
-      padding-left: 0.5rem; }
+      width: 24px;
+      height: 24px; }
   #compteur-likes_prix .prix {
     display: flex;
     align-items: center; }
